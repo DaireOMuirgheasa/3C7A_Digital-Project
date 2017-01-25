@@ -13,8 +13,8 @@
 
 void setup()
 {
-  pinMode(PASS, output);
-  pinMode(FAIL, output);
+  pinMode(PASS, OUTPUT);
+  pinMode(FAIL, OUTPUT);
   
   // other stuff
 }
