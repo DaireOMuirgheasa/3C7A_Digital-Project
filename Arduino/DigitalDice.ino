@@ -50,13 +50,14 @@ void logicTest()
 void chipTest()
 {
   DDRC = DDRC | B00011000; // clock, reset
+  DDRD = ~DDRD & B11110000;
   for (int i = 0; i < 6; i++){
     PORTC = 1<<5; // clock high
     delay(10); 
     PORTC = 0; // clock low
     delay(10); 
-    reading = PINC & B00000111; // read A0, A1, A2;
-    if(reading != i)
+    reading = PIND & B11110000; // read A0, A1, A2;
+    if((reading >> 4) != i)
       failed = true;
   }
   if (failed)
