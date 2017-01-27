@@ -5,7 +5,7 @@
 //    Mark Anderson
 //    Eoin Gogarty
 //    Rob Hanson
-//    Daire Morrissy
+//    Daire Ó Muirgheasa
 //
 
 #define PASS 13 // PASS/FAIL LEDs
