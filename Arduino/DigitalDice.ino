@@ -29,7 +29,7 @@ void logicTest()
   // Logic Test
   DDRD = DDRD | B11110000; // Using Bit Manipulation here as we are dealing with a parallel bus
   DDRB = DDRB | B00001111; // Using a bitwise OR means we don't accidentally change something
-  for (int i = 0; i < 6; i++){ // run through binary sequence on pins 
+  for (int i = 1; i < 7; i++){ // run through binary sequence on pins 
     PORTD = (i << 4); // output binary number on pins 4,5,6
     delay(10);
     reading = PINB & B00001111; // check inputs on B port (A - Pin 11, B - 10, C - 9, D - 8)
